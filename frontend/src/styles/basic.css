@@ -1,0 +1,7 @@
+html {
+  background-color: #040d2e;
+}
+
+.markdown > * {
+  all: revert;
+}

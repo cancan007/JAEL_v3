@@ -1,0 +1,20 @@
+{
+  "name": "jael",
+  "version": "1.0.0",
+  "description": "application for japanese learner",
+  "main": "index.js",
+  "repository": "https://github.com/cancan007/JAEL.git",
+  "author": "cancan007 <shota.moue0211@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "16.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd backend && rm -rf yarn.lock && npm run next-build && npm run build && npm run start:prod",
+    "start-without-next": "cd backend && rm -rf yarn.lock && npm run start:prod",
+    "start-yarn": "cd backend && yarn && yarn next-build && yarn start:prod",
+    "test-mobile": "cd jael_mobile && flutter run -d chrome --web-port 8080",
+    "heroku-postbuild": "cd backend && npm install"
+  }
+}
