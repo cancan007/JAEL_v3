@@ -1,5 +1,7 @@
 # 共通
 
+新しくタブを作成する：command + t
+タブを閉じる：command + w
 現在のタブから右へ移動する：command + shift + ]
 現在のタブから左へ移動する：command + shift + [
 ウィンドーを遷移する：command + tab
@@ -20,3 +22,5 @@
 - m + f: フォルダ作成
 - m + d: ファイル削除
 - m + r: ファイル名修正
+- space: 該当ファイルを Opened Editor 上に表示
+- command + space: 該当ファイルを分割で Opened Editor 上に表示
