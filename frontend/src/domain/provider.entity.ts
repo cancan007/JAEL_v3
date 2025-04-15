@@ -1,6 +1,14 @@
 import { ethers } from "ethers";
 
-export interface ProviderRepository {}
+export interface ProviderRepository {
+  getNetwork(): Promise<number>;
+  getAccount(): Promise<AccountInfo>;
+}
+
+export type AccountInfo = {
+  account: string;
+  balance: number;
+};
 
 export class Provider {
   connection?: ethers.BrowserProvider;
