@@ -1,13 +1,13 @@
 import { ethers } from "ethers";
 
 export interface ProviderRepository {
-  getNetwork(): Promise<number>;
+  getNetwork(): Promise<bigint>;
   getAccount(): Promise<AccountInfo>;
 }
 
 export type AccountInfo = {
   account: string;
-  balance: number;
+  balance: string;
 };
 
 export class Provider {
