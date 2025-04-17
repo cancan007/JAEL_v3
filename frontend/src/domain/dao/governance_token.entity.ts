@@ -11,14 +11,22 @@ import { backIn } from "framer-motion";
 export interface GovernanceTokenRepository {
   checkDelegatee(account: string): Promise<string>; //NOTE: 自分のガバナンストークンの投票権利を持っている人物のアドレスを取得i
   getAllDelegatedHistory(): Promise<Array<any>>; //TODO: 型定義
-  getTokenSummary(chainID: number): Promise<TokenSummary>;
+  getTokenSummary(): Promise<TokenSummary>;
   getBalance(account: string): Promise<number>;
   delegate(account: string): Promise<void>;
 }
 
 export type TokenSummary = {
   symbol: string;
-  decimal: number;
+  decimal: bigint;
+};
+
+export type DelegateChanged = {
+  delegatedAt: number;
+  delegator: string;
+  fromDelegate: string;
+  toDelegate: string;
+  blockNumber: number;
 };
 
 export class GovernanceTokenDomainModel {
